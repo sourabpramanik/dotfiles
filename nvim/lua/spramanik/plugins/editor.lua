@@ -59,6 +59,20 @@ return{
       "nvim-telescope/telescope-file-browser.nvim",
 		},
 		keys = {
+      {
+        "<leader>pws",
+        function()
+          local word = vim.fn.expand("<cword>")
+          require("telescope.builtin").grep_string({search = word})
+        end
+      },
+      {
+        "<leader>pWs",
+        function()
+          local word = vim.fn.expand("<cWORD>")
+          require("telescope.builtin").grep_string({search = word})
+        end
+      },
 			{
 				"<leader>fP",
 				function()
@@ -210,5 +224,10 @@ return{
 			require("telescope").load_extension("fzf")
 			require("telescope").load_extension("file_browser")
 		end,
-  }
+  },
+  {
+		"smjonas/inc-rename.nvim",
+		cmd = "IncRename",
+		config = true,
+	},
  }

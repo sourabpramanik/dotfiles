@@ -37,6 +37,8 @@ keymap.set("n", "w<right>", "<C-w>>")
 keymap.set("n", "w<up>", "<C-w>+")
 keymap.set("n", "w<down>", "<C-w>-")
 
+keymap.set("n", "<Leader>rn", ":IncRename ")
+
 keymap.set("n", "<C-j>", function()
 	vim.diagnostic.goto_next()
 end, opts)
