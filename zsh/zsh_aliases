@@ -1,0 +1,20 @@
+# ~/.zsh_aliases
+
+# Aliases
+alias update='sudo apt update && sudo apt upgrade'
+alias ll='ls -la'
+alias rm='rm -i'
+alias grep='grep --color=auto'
+alias xx='rm -rf'
+alias home='cd ~/'
+alias work='cd ~/work'
+alias personal='cd ~/personal'
+alias config='cd ~/.config'
+alias vi='nvim'
+alias vs='code'
+
+# Function alias
+function mkcd() {
+  mkdir -p "$1"
+  cd "$1"
+}
